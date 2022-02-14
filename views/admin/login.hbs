@@ -1,0 +1,13 @@
+<h1>Log In</h1>
+
+{{#if conocido}}
+<h2>Introduce tus datos</h2> <a href="/salir">Salir</a>
+{{/if}}
+
+{{#unless conocido}}
+<p>Tienes que iniciar sesion</p>
+<p>ATENCION!!!! Si el campo "Nombre" queda en blanco, seras redireccionado a users</p>
+<form action="/ingresar" method="post">
+    <input type="text" name="nombre"><button>Ingresar</button>
+</form>
+{{/unless}}
